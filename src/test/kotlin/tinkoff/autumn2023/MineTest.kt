@@ -9,7 +9,7 @@ import java.io.ByteArrayOutputStream
 import java.io.PrintStream
 import java.util.stream.Stream
 
-class FirstTest {
+class MineTest {
 
     @ParameterizedTest
     @MethodSource("additionData")
@@ -19,7 +19,7 @@ class FirstTest {
         val outputStream = ByteArrayOutputStream()
         System.setOut(PrintStream(outputStream))
 
-        First().main()
+        Mine().main()
 
         Assertions.assertEquals(expectedOutput, outputStream.toString())
     }
@@ -29,9 +29,29 @@ class FirstTest {
         fun additionData(): Stream<Arguments> {
             return Stream.of(
                 Arguments.of(
-                    "6\n" +
-                            "10 3 5 3 11 9\n",
-                    "2 5"
+                    "7 13\n" +
+                            "2 3 1\n" +
+                            "3 3\n" +
+                            "1 2 4\n" +
+                            "2 1 1\n" +
+                            "3 4\n" +
+                            "2 3 4\n" +
+                            "1 3 4\n" +
+                            "3 4\n" +
+                            "1 7 3\n" +
+                            "1 1 3\n" +
+                            "3 7\n" +
+                            "3 1\n" +
+                            "2 7 4",
+                    "NO\n" +
+                            "1\n" +
+                            "YES\n" +
+                            "2\n" +
+                            "NO\n" +
+                            "3\n" +
+                            "3\n" +
+                            "2\n" +
+                            "YES\n"
                 ),
             )
         }
