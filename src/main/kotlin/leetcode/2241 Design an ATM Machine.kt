@@ -1,6 +1,6 @@
 package leetcode
 
-class ATM {
+class `2241 Design an ATM Machine` {
 
     fun deposit(banknotesCount: IntArray) {
 

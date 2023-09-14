@@ -1,6 +1,6 @@
 package leetcode
 
-class LongestSubArray {
+class `1493 longestSubarray` {
 
     fun longestSubArray(nums: IntArray): Int {
         if (!nums.contains(0)) {
