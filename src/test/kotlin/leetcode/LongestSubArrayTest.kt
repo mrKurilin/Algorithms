@@ -11,7 +11,10 @@ class LongestSubArrayTest {
     @ParameterizedTest
     @MethodSource("additionData")
     fun test(nums: IntArray, expected: Int) {
-        Assertions.assertEquals(expected, LongestSubArray().longestSubArray(nums))
+        Assertions.assertEquals(
+            expected,
+            `1493 longestSubarray`().longestSubArray(nums)
+        )
     }
 
     companion object {
